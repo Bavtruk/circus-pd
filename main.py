@@ -98,8 +98,12 @@ while x<=30:
      print("lucky computer got on the blue stairs")
    print("Oponents location",computer_location)
 #ja spēlētājs sasniedz 100 ātrāk nekā dators, viņš uzvar
-   if player_location>=100:
+   if player_location>=100: 
        print("You won")
+       break
    elif computer_location>=100:
        print("You lost")
-print("draw")
+       break
+if player_location<100 and computer_location<100:
+    print("draw")
+
