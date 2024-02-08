@@ -23,3 +23,83 @@
 # Nejauša skaitļa generēšana - https://www.w3schools.com/python/ref_random_randint.asp
 # Github Fork (repozitorija kopija) - https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
 # Klonēt repozitoriju - hhttps://code.visualstudio.com/docs/sourcecontrol/intro-to-git
+
+import random 
+player_location=1
+computer_location=1
+x=0
+print("Welcome to the circus")
+#while,pārliecinās, ka ir ne vairāk kā 30 kustības
+while x<=30:
+#if,ja spēlētāja vai datora pozīcija ir mazāka par 100, spēle turpinās
+  if player_location<=100 or computer_location<=100:
+   x=x+1
+
+   print("Your turn to roll to dice type anything")
+   a=input()
+   dice=random.randint(1,6)
+   print("You rolled", dice)
+   player_location=player_location+dice
+   #ja spēlētāja pozīcija atrodas uz kāda no iepriekšminētajām vietām, viņš tiks novietots uz kāpnēm un viņa pozīcija var pacelties vai pazemināties
+   if player_location == 16:
+     player_location = 5
+     print("unlucky you ended up on the blue stairs")
+   elif player_location == 13:
+     player_location = 22
+     print("lucky you got on the red stairs")
+   elif player_location == 37:
+     player_location = 46
+     print("lucky you got on the red stairs")
+   elif player_location == 31:
+     player_location = 50
+     print("lucky you got on the red stairs")
+   elif player_location == 85:
+     player_location = 94
+     print("lucky you got on the red stairs")
+   elif player_location == 65:
+     player_location = 44
+     print("unlucky you ended up on the blue stairs")
+   elif player_location == 78:
+     player_location = 67 
+     print("unlucky you ended up on the blue stairs")
+   elif player_location == 72:
+     player_location = 61
+     print("unlucky you ended up on the blue stairs")
+   print("Your location ", player_location)
+
+   print("Oponents turn ")
+   dice=random.randint(1,6)
+   print("Oponents rolled", dice )
+   computer_location=computer_location+dice
+   #ja datora pozīcija atrodas uz kāda no iepriekšminētajām vietām, viņš tiks novietots uz kāpnēm un viņa pozīcija var pacelties vai pazemināties
+   if computer_location == 16:
+     computer_location = 5
+     print("lucky computer got on the blue stairs")
+   elif computer_location == 13:
+     computer_location = 22
+     print("unlucky computer got on the red stairs")
+   elif computer_location == 37:
+     computer_location = 46
+     print("unlucky computer got on the red stairs")
+   elif computer_location == 31:
+     computer_location = 50
+     print("unlucky computer got on the red stairs")
+   elif computer_location == 85:
+     computer_location = 94
+     print("unlucky computer got on the red stairs")
+   elif computer_location == 65:
+     computer_location = 44
+     print("lucky computer got on the blue stairs")
+   elif computer_location == 78:
+     computer_location = 67
+     print("lucky computer got on the blue stairs") 
+   elif computer_location == 72:
+     computer_location = 61
+     print("lucky computer got on the blue stairs")
+   print("Oponents location",computer_location)
+#ja spēlētājs sasniedz 100 ātrāk nekā dators, viņš uzvar
+   if player_location>=100:
+       print("You won")
+   elif computer_location>=100:
+       print("You lost")
+print("draw")
