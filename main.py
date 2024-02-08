@@ -29,9 +29,9 @@ player_location=1
 computer_location=1
 x=0
 print("Welcome to the circus")
-#while,pārliecinās, ka ir ne vairāk kā 30 kustības
+#while,pārliecinās, ka ir ne vairāk kā 30 kustības.
 while x<=30:
-#if,ja spēlētāja vai datora pozīcija ir mazāka par 100, spēle turpinās
+#if,ja spēlētāja vai datora pozīcija ir mazāka par 100, spēle turpinās.
   if player_location<=100 or computer_location<=100:
    x=x+1
 
@@ -40,7 +40,7 @@ while x<=30:
    dice=random.randint(1,6)
    print("You rolled", dice)
    player_location=player_location+dice
-   #ja spēlētāja pozīcija atrodas uz kāda no iepriekšminētajām vietām, viņš tiks novietots uz kāpnēm un viņa pozīcija var pacelties vai pazemināties
+   #ja spēlētāja pozīcija atrodas uz kāda no iepriekšminētajām vietām, viņš tiks novietots uz kāpnēm un viņa pozīcija var pacelties vai pazemināties.
    if player_location == 16:
      player_location = 5
      print("unlucky you ended up on the blue stairs")
@@ -71,7 +71,7 @@ while x<=30:
    dice=random.randint(1,6)
    print("Oponents rolled", dice )
    computer_location=computer_location+dice
-   #ja datora pozīcija atrodas uz kāda no iepriekšminētajām vietām, viņš tiks novietots uz kāpnēm un viņa pozīcija var pacelties vai pazemināties
+   #ja datora pozīcija atrodas uz kāda no iepriekšminētajām vietām, viņš tiks novietots uz kāpnēm un viņa pozīcija var pacelties vai pazemināties.
    if computer_location == 16:
      computer_location = 5
      print("lucky computer got on the blue stairs")
@@ -97,13 +97,14 @@ while x<=30:
      computer_location = 61
      print("lucky computer got on the blue stairs")
    print("Oponents location",computer_location)
-#ja spēlētājs sasniedz 100 ātrāk nekā dators, viņš uzvar
+#ja spēlētājs sasniedz 100 ātrāk nekā dators, viņš uzvar.
    if player_location>=100: 
        print("You won")
        break
    elif computer_location>=100:
        print("You lost")
        break
+ # tā pārbauda, ​​vai katram spēlētājam ir mazāk par 100, 30 gājienos, un parāda neizšķirtu.
 if player_location<100 and computer_location<100:
     print("draw")
 
